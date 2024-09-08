@@ -8,7 +8,7 @@ pipeline {
             choices: ['development', 'production'],
             description: 'Select the environment'
         )
-        activeChoicesReactiveParam(
+        reactiveChoice(
             name: 'BUCKET_NAME',
             description: 'Select the S3 bucket name based on environment',
             choiceType: 'SINGLE_SELECT',
@@ -26,7 +26,7 @@ pipeline {
                 '''
             ]
         )
-        activeChoicesReactiveParam(
+        reactiveChoice(
             name: 'SYMLINK_PATH',
             description: 'Select the symlink path based on environment',
             choiceType: 'SINGLE_SELECT',
@@ -44,7 +44,7 @@ pipeline {
                 '''
             ]
         )
-        activeChoicesReactiveParam(
+        reactiveChoice(
             name: 'ROLE_ARN',
             description: 'Role ARN for AWS based on environment',
             choiceType: 'SINGLE_SELECT',
@@ -62,7 +62,7 @@ pipeline {
                 '''
             ]
         )
-        activeChoicesReactiveParam(
+        reactiveChoice(
             name: 'CREDENTIALS_ID',
             description: 'AWS Credentials ID based on environment',
             choiceType: 'SINGLE_SELECT',
@@ -80,7 +80,7 @@ pipeline {
                 '''
             ]
         )
-        activeChoicesReactiveParam(
+        reactiveChoice(
             name: 'S3_OUTPUT_LOCATION',
             description: 'S3 Output Location based on environment',
             choiceType: 'SINGLE_SELECT',
@@ -98,7 +98,7 @@ pipeline {
                 '''
             ]
         )
-        activeChoicesReactiveParam(
+        reactiveChoice(
             name: 'S3_SYMLINK_LOCATION',
             description: 'S3 Symlink Location based on environment',
             choiceType: 'SINGLE_SELECT',
