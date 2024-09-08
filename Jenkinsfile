@@ -152,7 +152,7 @@ pipeline {
         stage('Run Python Code') {
             steps {
                 script {
-                    bat 'python3 athena_query.py'
+                    bat 'python athena_query.py'
                 }
             }
         }
